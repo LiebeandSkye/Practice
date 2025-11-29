@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="login.js"></script>
+    <style>
+       i{
+        position: absolute;
+        top: 25%;
+        right: 4%;
+       }
+       .leftborder{
+        border-left: 1px solid black;
+        border-radius: none;
+       }
+       .try {
+        z-index: -1;
+        background-image: url("https://imgs.search.brave.com/WwL_rdWmRNrRi1sJA6LBoLPEiLscME-8pKAJ2Jrjlm8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvdGh1/bWJuYWlscy8wNTIv/MTMzLzc5OC9zbWFs/bC9hYnN0cmFjdC1n/ZW9tZXRyaWMtd2hp/dGUtYW5kLWdyYXkt/Y29sb3ItYmFja2dy/b3VuZC1ib2tlaC1w/YXR0ZXJuLWlsbHVz/dHJhdGlvbi12ZWN0/b3IuanBn");
+        background-size: cover;
+        background-repeat: no-repeat;
+       }
+    </style>
+</head>
+<body >
+    <div class="container-fluid d-flex justify-content-center align-content-center align-items-center vh-100 try">
+        <div class="container w-75 d-flex h-75 m-0 p-0 overflow-hidden shadow-lg rounded-4 border border-1 border-dark">
+            <img class="order-1 w-50 object-fit-cover leftborder"src="https://imgs.search.brave.com/lokTdhsZHpAO0TXPkTNYj3ANEP1iExZGSufXqq3fVr8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL00v/TVY1Qk4yVmpNelUw/WmprdFlqUmpNeTAw/TnpZMExUazNOV0l0/T1dFMk5XWmhNall5/TmpNd1hrRXlYa0Zx/Y0djQC5qcGc">
+            <div class="form-control py-3 gap-1 d-flex flex-column">
+                <h1 class="text-dark text-center mb-4 pt-4">Login Form</h1>
+                <div class="container w-75">
+                <label for="email">Email</label>
+                <div class="position-relative"><i class="fa-regular fa-user"></i><input type="email" name="email" id="email" class="form-control mb-3" placeholder="e.g. example@gmail.com"></div>
+                <label for="password">Password</label>
+                <div class="position-relative"><i class="fa-solid fa-lock lock"><i class="fa-solid fa-unlock d-none unlock"></i></i><input type="password" name="password" id="password" class="form-control mb-3" placeholder="**********"></div>
+                <label for="comfirmedpassword" >Comfirm Password</label>
+                <div class="position-relative"><i class="fa-solid fa-lock lock"><i class="fa-solid fa-unlock d-none unlock"></i></i><input type="password" name="comfirmedpassword" id="comfirmedpassword" class="form-control mb-3" placeholder="**********"></div>
+                <label for="remember-me" class="d-flex align-items-center mt-3 gap-2">
+                    <input type="checkbox" name="remember-me" id="remember-me">
+                    Remember me
+                </label>
+                <button class="btn btn-outline-dark mt-4 w-100 mb-5">Login</button>
+                <div class="text-center mt-2 mb-4 pb-5"><p>Don't have an account? <a href="#">Sign up</a></p></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

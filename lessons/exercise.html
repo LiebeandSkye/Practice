@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=BBH+Sans+Bogle&family=BBH+Sans+Hegarty&family=Battambang:wght@100;300;400;700;900&family=Bitcount+Grid+Single:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Manrope:wght@200..800&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Moul&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: "Lato", sans-serif;
+            box-sizing: border-box
+        }
+
+        .carrot {
+            position: relative;
+            top: -3px;
+        }
+
+        .font {
+            background-color: white;
+            box-shadow: 2px 2px 6px 0px rgb(0 0 0 / 0.1), 0 4px 6px -2px rgb(0 0 0 / 0.1);
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 56px;
+            cursor: pointer;
+        }
+
+        .green {
+            background-color: rgb(253, 244, 224);
+        }
+
+        .main {
+            height: 80vh;
+        }
+
+        .bat {
+            width: 150px;
+            text-align: center;
+            text-decoration: none;
+            color: white;
+            padding: 10px;
+        }
+
+        .w-fit {
+            width: fit-content;
+        }
+
+        .gray {
+            background-color: rgb(238, 235, 235)
+        }
+
+        .category {
+            text-decoration: none;
+            color: black;
+            cursor: pointer;
+        }
+
+        .category_active {
+            text-decoration: underline;
+            text-decoration-color: rgb(23, 153, 23);
+            text-decoration-thickness: 2px;
+            text-underline-offset: 10px;
+            color: rgb(23, 153, 23);
+        }
+
+        .category:hover {
+            color: rgb(23, 153, 23);
+            transition: 0.2s ease-in-out;
+        }
+
+        .line {
+            position: relative;
+            padding: 10px;
+            border: 2px gray;
+        }
+
+        .line::after {
+            content: "";
+            /* Step 2: Position the pseudo-element absolutely */
+            position: absolute;
+            top: 50%;
+            /* Start the "border" halfway down */
+            right: 0;
+            /* Place it on the right edge */
+
+            /* Step 3: Define its size and style */
+            width: 2px;
+            /* This is the border thickness */
+            height: 50%;
+            /* <--- **CONTROLS THE LENGTH/HEIGHT** */
+            background-color: gray;
+
+            /* Step 4: Adjust position to be centered vertically */
+            transform: translateY(-50%);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid m-0 pt-4 green" style="height: 100vh; width:100%;">
+        <div class="container">
+            <div class="container m-auto px-5 d-flex justify-content-between align-items-center">
+                <div class="d-flex gap-2 position-relative">
+                    <i
+                        class="fa-solid fa-seedling fs-4 d-flex align-items-center justify-content-center text-success carrot"></i>
+                    <h2 class="text-dark fw-semibold">Broccoli</h2>
+                </div>
+                <!-- Example single danger button -->
+                <div class="btn-group gap-3">
+                    <button type="button" class="btn text-dark fw-semibold dropdown-toggle" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Home
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">Separated link</a></li>
+                    </ul>
+                    <button type="button" class="btn text-dark fw-semibold dropdown-toggle" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Shop
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">Separated link</a></li>
+                    </ul>
+                    <button type="button" class="btn text-dark fw-semibold dropdown-toggle" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        About
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">Separated link</a></li>
+                    </ul>
+                    <ul class="nav">
+                        <li class="nav-item"> <a href="#" class="nav-link text-dark fw-semibold">Blogs
+                            </a></li>
+                        <li class="nav-item"> <a href="#" class="nav-link text-dark fw-semibold">Contact</a> </li>
+                    </ul>
+                    <button type="button" class="btn text-dark fw-semibold dropdown-toggle" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Pages
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">Separated link</a></li>
+                    </ul>
+                    <div class="row mx-3 gap-3">
+                        <!--Button Name-->
+                        <button class="border-0 font" type="button" data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"><i
+                                class='bx  bx-search'></i></button>
+                        <button class="border-0 font" type="button" data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"><i
+                                class='bx  bx-user'></i></i></button>
+                        <button class="border-0 font" type="button" data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"><i
+                                class='bx  bx-cart'></i></button>
+                        <!---Canvas--->
+                        <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false"
+                            tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+                            <div class="offcanvas-header">
+                                <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Search your favorite products
+                                </h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                    aria-label="Close"></button>
+                            </div>
+                            <!--Canvas Body-->
+                            <div class="offcanvas-body">
+                                <div class="input-group mb-3">
+                                    <input type="text" class="form-control" placeholder="Search..."
+                                        aria-label="Search..." aria-describedby="button-addon2">
+                                    <button class="btn btn-outline-secondary" type="button"
+                                        id="button-addon2">Search</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--FIRST CONTENT-->
+            <div id="carouselExampleIndicators" class="carousel slide">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                        class="active text-bg-success" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                        class="text-bg-success" aria-label="Slide 2"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="container d-flex align-items-center justify-content-between main">
+                            <div class="d-flex flex-column gap-4">
+                                <span class="text-success fw-bold animate__animated animate__zoomIn">100% Genuine
+                                    Products</span>
+                                <h1 class="fw-bold animate__animated animate__zoomIn" style="font-size: 60px;">Tasty &
+                                    Healthy<br>Organic Food</h1>
+                                <a href="#" class="bat bg-success animate__animated animate__zoomIn">Shop Now</a>
+                            </div>
+                            <div class="d-flex justify-content-end">
+                                <img class="w-100 animate__animated animate__zoomIn" src="../veggie2.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="container d-flex align-items-center justify-content-between main">
+                            <div class="d-flex flex-column gap-4">
+                                <span class="text-success fw-bold animate__animated animate__zoomIn">100% Genuine
+                                    Products</span>
+                                <h1 class="fw-bold animate__animated animate__zoomIn" style="font-size: 60px;">Tasty &
+                                    Healthy<br>Organic Food</h1>
+                                <a href="#" class="bat bg-success animate__animated animate__zoomIn"> Shop Now</a>
+                            </div>
+                            <div class="d-flex justify-content-end">
+                                <img class="w-100 animate__animated animate__zoomIn" src="../veggie.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--END OF FIRST CONTENT-->
+    <!--SECOND SECTION-->
+    <div class="container my-5 d-flex gap-3">
+        <div class="green d-flex w-fit p-5">
+            <div>
+                <div class="d-flex gap-xxl-2">
+                    <h1 class="text-success">Green lemon</h1> <i
+                        class="fa-brands fa-pagelines d-flex align-items-center fs-2 text-success"></i>
+                </div>
+                <div class="d-flex flex-column gap-5">
+                    <h1 class="text-success-emphasis">Orange Juice</h1>
+                </div>
+                <p class="text-success mt-3">BEST ORANGE<br>-FLAVOR YOU NEVER MISS...</p>
+                <button class="text-light bg-success border-0 py-2 px-3 rounded-5 mt-3">Shop Now<i
+                        class="fa-solid fa-arrow-right mx-2"></i></button>
+            </div>
+            <div class="d-flex" style="width:250px; margin-top: 4rem;">
+                <img class="w-100" src="../orangejuice.png">
+            </div>
+        </div>
+        <div class="d-flex flex-column w-50 gap-3">
+            <div class="gray d-flex h-50 p-5">
+                <img style="width: 40%;" src="../almond.png">
+                <div class="mx-5">
+                    <h2 class="text-success-emphasis">Up to 15% off<br> Fresh Almond Seed</h2>
+                    <p class="text-success">From <span>69.99 <sup>$</sup></span></p>
+                </div>
+            </div>
+            <div class="gray d-flex h-50 p-5">
+                <div class="mx-5">
+                    <h2 class="text-success-emphasis">50% off in Fresh<br> Mango Drinks</h2>
+                    <button class="text-light bg-success border-0 py-2 px-3 rounded-5 mt-3">Shop Now<i
+                            class="fa-solid fa-arrow-right mx-2"></i></button>
+                </div>
+                <img style="width: 40%;" src="../mango3.png">
+            </div>
+        </div>
+
+    </div>
+    <div class="container mx-xl-5">
+        <h1 class="text-center text-dark fw-bold" style="font-size: 56px;">Our Products</h1>
+        <div class="container text-center mt-4">
+            <div class="row">
+                <div class="col line">
+                    <a class="category category_active">FOOD & DRINKS</a>
+                </div>
+                <div class="col line">
+                    <a class="category">BREAD & CAKE</a>
+                </div>
+                <div class="col line">
+                    <a class="category">DRIED FOODS</a>
+                </div>
+                <div class="col line">
+                    <a class="category">FISH & MEAT</a>
+                </div>
+                <div class="col">
+                    <a class="category">VEGETABLE</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container my-5 py-4 d-flex flex-wrap gap-3">
+        <div class="card object-fit-cover shadow-lg" style="width: 18rem;">
+            <div class="overflow-hidden" style="height: 230px;">
+                <img src="../mango3.png" class="img-fluid" alt="...">
+            </div>
+            <div class="card-body">
+                <div class="d-flex gap-1 justify-content-center text-warning my-2 mb-3">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+                <p class="card-text text-center">Mango</p>
+                <p class="text-success text-center fs-5">$2.99</p>
+            </div>
+        </div>
+        <div class="card object-fit-cover shadow-lg" style="width: 18rem;">
+            <div class="overflow-hidden" style="height: 230px;">
+                <img src="../almond.png" class="img-fluid" alt="...">
+            </div>
+            <div class="card-body">
+                <div class="d-flex gap-1 justify-content-center text-warning my-2 mb-3">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+                <p class="card-text text-center">Almonds</p>
+                <p class="text-success text-center fs-5">$0.99</p>
+            </div>
+        </div>
+        <div class="card object-fit-cover shadow-lg" style="width: 18rem;">
+            <div class="overflow-hidden" style="height: 230px;">
+                <img src="../veggie.png" class="img-fluid" alt="...">
+            </div>
+            <div class="card-body">
+                <div class="d-flex gap-1 justify-content-center text-warning my-2 mb-3">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+                <p class="card-text text-center">Veggie</p>
+                <p class="text-success text-center fs-5">$99.99</p>
+            </div>
+        </div>
+        <div class="card object-fit-cover shadow-lg" style="width: 18rem;">
+            <div class="overflow-hidden" style="height: 230px;">
+                <img src="../orangejuice2.png" class="img-fluid" alt="...">
+            </div>
+            <div class="card-body">
+                <div class="d-flex gap-1 justify-content-center text-warning my-2 mb-3">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+                <p class="card-text text-center">Orange Juice</p>
+                <p class="text-success text-center fs-5">$29.99</p>
+            </div>
+        </div>
+        <div class="card object-fit-cover shadow-lg" style="width: 18rem;">
+            <div class="overflow-hidden" style="height: 230px;">
+                <img src="../mango2.png" class="img-fluid" alt="...">
+            </div>
+            <div class="card-body">
+                <div class="d-flex gap-1 justify-content-center text-warning my-2 mb-3">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+                <p class="card-text text-center">Square Mango</p>
+                <p class="text-success text-center fs-5">$9.99</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

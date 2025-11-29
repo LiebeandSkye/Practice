@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <style>
+        .active {
+            background-color: #0d6efd;
+            color: white;
+            border-radius: 6px;
+            padding: 0.5rem 18px;
+        }
+        .active:hover {
+            background-color: #0b5ed7;
+            color: white;
+        }
+        .ninja {
+            border-bottom: 1px solid #0d6efd;
+        }
+        .dropdown-item {
+            color: white;
+        }
+        .dropdown-item:hover{
+            background-color: #0b5ed7;
+            transition: 0.2s ease-in-out;
+            color: white;
+        }
+    </style>
+</head>
+<body class="bg-dark">
+    <div class="ninja container-fluid d-flex my-4 mb-3 gap-5  pb-3 align-items-center">
+        <h1 class="text-primary">ETEC Center</h1>
+        <ul class="nav fs-6 gap-3">
+            <li class="nav-item"> <a href="#" class="nav-link active">Home</a> </li>
+            <li class="nav-item"> <a href="#" class="nav-link">About</a> </li>
+            <li class="nav-item"> <a href="form.html" target="_blank" class="nav-link">Services</a> </li>
+            <li class="nav-item"> <a href="#" class="nav-link">Contact</a> </li>
+            <li class="nav-item"> <div class="dropdown">
+                <button class="btn btn-primary dropdown-toggle fs-6 py-2" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Locations
+                </button>
+                <ul class="dropdown-menu bg-primary">
+                    <li><a class="dropdown-item" href="#">Campus 1</a></li>
+                    <li><a class="dropdown-item" href="#">Campus 2</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item disabled text-secondary-emphasis" href="#">Coming soon...</a></li>
+                </ul>
+            </div></li>
+
+        </ul>
+  
+    </div>      
+</body>
+</html>
